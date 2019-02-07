@@ -94,3 +94,36 @@ Things To Know
         -  you can visit it at - http://localhost:3000/graphiql
 
 **Note:** This is just a brief, there are more features like real-time updates, authentication, authorization, file uploading and more that happens can be done with [GraphQl](https://www.howtographql.com/)
+
+
+Usage 
+---
+You decide which data to get from the backend.
+1. Go to http://localhost:3000/graphiql and query the following
+Get all Users with their firstname and lastname
+```
+query {
+  users {
+    firstname
+    lastname
+  }
+}
+```
+
+Create new user and get their id as response
+```
+mutation {
+  createUser(input: {firstname: "tom", lastname: "tewolde"}) {
+    id
+  }
+}
+```
+There are graphql clients that can help us achieve this type of api qureing from our frontend.
+
+PostMan
+---
+```
+endpoint: http://localhost:3000/graphql
+payload: {"query":"{users{firstname, lastname}}"}
+```
+This postman example is just for presentation and not the standard way of GraphQl quering.

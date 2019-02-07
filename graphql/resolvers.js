@@ -12,6 +12,12 @@ export default function resolvers () {
         return models.User.findAll({}, context);
       }
     },
+    RootMutation: {
+      createUser (root, { input }, context) {
+        return models.User.create(input, context);    
+      },
+     
+    },
 
     User: {
       projects (user) {
