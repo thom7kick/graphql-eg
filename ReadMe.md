@@ -99,7 +99,8 @@ Things To Know
 Usage 
 ---
 You decide which data to get from the backend.
-1. Go to http://localhost:3000/graphiql and query the following
+Go to http://localhost:3000/graphiql and query the following
+
 Get all Users with their firstname and lastname
 ```
 query {
